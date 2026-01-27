@@ -16,7 +16,7 @@ import java.util.List;
 @Setter
 @Builder
 @Entity
-@Table(name = "/movie")
+@Table(name = "movie")
 public class Movie {
 
     @Id
@@ -44,7 +44,7 @@ public class Movie {
     @ManyToMany
     @JoinTable(name = "movie_category",
         joinColumns = @JoinColumn(name = "movie_id"),
-        inverseJoinColumns = @JoinColumn(name = "cateory_id")
+        inverseJoinColumns = @JoinColumn(name = "category_id")
     )
     private List<Category> categories;
 
