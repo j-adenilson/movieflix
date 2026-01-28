@@ -20,6 +20,7 @@ public class MovieMapper {
                 .map(categoryId -> Category.builder().id(categoryId).build())
                 .toList();
 
+
         List<Streaming>streamings = request.streamings().stream()
                 .map(streamingId -> Streaming.builder().id(streamingId).build())
                 .toList();
@@ -55,5 +56,6 @@ public class MovieMapper {
                 .categories(categories)
                 .streamings(streamings)
                 .build();
+
     }
 }
